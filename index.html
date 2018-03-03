@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="pl-PL">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://use.fontawesome.com/7be46c39d7.js"></script>
+		<title>Lorem ipsum company</title>
+		<style>
+			
+			body,html{
+				background-color: #000000;
+				display: grid;
+				height: 100%;
+				margin:0;
+				overflow: hidden;
+				font-size: 20px;
+			}
+			
+			.wraper{
+				width:100%;
+				height: 100%;
+				margin: auto;
+				display: grid;
+				grid-template-columns: 32.8% 32.8% 32.8%;
+				grid-template-rows:32% 32% 32%;
+				grid-column-gap: 1.6%;
+				grid-row-gap: 3%;
+				
+			}
+			
+			.wraper > div{
+				background-color: #3f4df7;
+				color:white;
+			}
+			
+			.a{
+				grid-row: span 2;
+			}
+			
+			
+			.g{
+				grid-column: span 2;
+			}
+			
+			.wraper div{
+				transition: all 1s ease;
+				/*border-radius: 5px;*/
+				position: relative;
+			}
+			
+			.wraper div i{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			
+			.wraper div:hover{
+				background-color: #7676ff;
+				color: #343434;
+				/*box-shadow: 3px 3px 5px #5b46ff;**/
+			}
+			
+			.hidden div{
+				opacity: 0;
+				/*background-color: #ffffa6;*/
+			}
+			
+			
+			.wraper.hidden div:nth-child(1){
+				transform: translateX(-30px) translateY(-30px);
+			}
+			
+			.wraper.hidden div:nth-child(2){
+				transform:translateY(-60px);
+			}
+			
+			.wraper.hidden div:nth-child(3){
+				transform: translateX(40px) translateY(-40px);
+			}
+			
+			.wraper.hidden div:nth-child(4){
+				transform: translateX(20px);
+			}
+			
+			.wraper.hidden div:nth-child(5){
+				transform: translateX(40px);
+			}
+			
+			.wraper.hidden div:nth-child(6){
+				transform: translateY(20px);
+			}
+			
+			.wraper.hidden div:nth-child(7){
+				transform: translateX(20px) translateY(40px);
+				
+			}
+		</style>
+	</head>
+	<body>
+	<div class="wraper hidden">
+		<div class="a"><i class="fa fa-facebook-square fa-5x" aria-hidden="true"></i></div>
+		<div class="b"><i class="fa fa-google-plus-square fa-5x" aria-hidden="true"></i></div>
+		<div class="c"><i class="fa fa-twitter-square fa-5x" aria-hidden="true"></i></div>
+		<div class="d"><i class="fa fa-youtube-square fa-5x" aria-hidden="true"></i></div>
+		<div class="e"><i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i></div>
+		<div class="f"><i class="fa fa-reddit-square fa-5x" aria-hidden="true"></i></div>
+		<div class="g"><i class="fa fa-first-order fa-5x" aria-hidden="true"></i></div>
+	</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			setTimeout(function(){
+			$('.wraper').removeClass('hidden')
+			},500);
+		});
+	</script>
+</html>
