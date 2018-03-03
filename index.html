@@ -10,7 +10,6 @@
 			
 			body,html{
 				background-color: #000000;
-				display: grid;
 				height: 100%;
 				margin:0;
 				overflow: hidden;
@@ -25,27 +24,24 @@
 				grid-template-columns: 32.8% 32.8% 32.8%;
 				grid-template-rows:32% 32% 32%;
 				grid-column-gap: 1.6%;
-				grid-row-gap: 3%;
-				
-			}
-			
-			.wraper > div{
-				background-color: #3f4df7;
-				color:white;
+				grid-row-gap: 3%;		
 			}
 			
 			.a{
 				grid-row: span 2;
 			}
 			
-			
 			.g{
 				grid-column: span 2;
 			}
 			
+			.wraper > div{
+				background-color: #3a4769;
+				color:white;
+			}
+			
 			.wraper div{
 				transition: all 1s ease;
-				/*border-radius: 5px;*/
 				position: relative;
 			}
 			
@@ -57,16 +53,14 @@
 			}
 			
 			.wraper div:hover{
-				background-color: #7676ff;
-				color: #343434;
-				/*box-shadow: 3px 3px 5px #5b46ff;**/
+				background-color: #c6c8d4;
+				color: #000000;
+				cursor: pointer;
 			}
 			
 			.hidden div{
 				opacity: 0;
-				/*background-color: #ffffa6;*/
-			}
-			
+			}		
 			
 			.wraper.hidden div:nth-child(1){
 				transform: translateX(-30px) translateY(-30px);
@@ -93,12 +87,13 @@
 			}
 			
 			.wraper.hidden div:nth-child(7){
-				transform: translateX(20px) translateY(40px);
-				
+				transform: translateX(20px) translateY(40px);	
 			}
+			
 		</style>
 	</head>
 	<body>
+	
 	<div class="wraper hidden">
 		<div class="a"><i class="fa fa-facebook-square fa-5x" aria-hidden="true"></i></div>
 		<div class="b"><i class="fa fa-google-plus-square fa-5x" aria-hidden="true"></i></div>
@@ -108,7 +103,9 @@
 		<div class="f"><i class="fa fa-reddit-square fa-5x" aria-hidden="true"></i></div>
 		<div class="g"><i class="fa fa-first-order fa-5x" aria-hidden="true"></i></div>
 	</div>
+	
 	</body>
+	
 	<script type="text/javascript">
 		$(function(){
 			setTimeout(function(){
@@ -116,4 +113,5 @@
 			},500);
 		});
 	</script>
+	
 </html>
